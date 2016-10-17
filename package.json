@@ -12,7 +12,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chenxianming/react-native-build.git"
+    "url": "git+https://github.com/chenxianming/react-native-build.git"
   },
   "devDependencies": {
     "should": ">= 0.0.1 <9.0.0",
@@ -30,5 +30,9 @@
   ],
   "dependencies": {
     "commander": "^2.9.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/chenxianming/react-native-build/issues"
+  },
+  "homepage": "https://github.com/chenxianming/react-native-build#readme"
 }
