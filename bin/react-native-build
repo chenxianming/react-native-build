@@ -1,0 +1,54 @@
+#!/usr/bin/env node
+
+var commander = require('commander');
+
+commander.version(require('../package').version)
+    .usage('[options] build')
+    .option('-a --bulildapk','input your react-native android path.')
+    .parse(process.argv);
+
+
+if(!commander.args.length){
+    return commander.help();
+}
+
+var path = commander.args.join(' ');
+var exec = require('child_process').exec;
+
+;(function(){
+    return new Promise(function(resolve,reject){
+        exec('cd '+path,function(err,stdout,stderr){
+            if(err){
+                throw err;
+            }
+            resolve(stdout);
+        });
+    });
+}()).then(function(){
+    return new Promise(function(resolve,reject){
+        try{
+            exec("curl -k 'http://localhost:8081/index.android.bundle' > "+path+"/app/src/main/assets/index.android.bundle",function(err,stdout,stderr){
+                if(err){
+                    throw err;
+                }
+                resolve(stdout);
+            });
+        }catch(e){
+            throw 'Error!running "react-native start" before.';
+        }
+    });
+}).then(function(){
+    return new Promise(function(resolve,reject){
+        exec('cd '+path+' && ./gradlew assembleDebug',function(err,stdout,stderr){
+            if(err){
+                throw err;
+            }
+            resolve(stdout);
+        });
+    });
+}).then( 
+    (stdout) => {
+        result = path+'/app/build/outputs/apk';
+        console.log('success. your app file at the '+result);
+    }
+);

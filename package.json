@@ -1,36 +1,24 @@
 {
   "name": "react-native-build",
-  "version": "0.0.1",
-  "description": "auto ",
-  "keywords": [
-    "commander",
-    "command",
-    "option",
-    "parser"
-  ],
-  "author": "chenxianming <im@c-xm.com>",
-  "license": "MIT",
+  "version": "1.0.0",
+  "description": "react-native-build (android only)",
+  "main": "index.js",
+  "dependencies": {
+    "commander": "^2.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chenxianming/react-native-build.git"
   },
-  "devDependencies": {
-    "should": ">= 0.0.1 <9.0.0",
-    "sinon": ">=1.17.1"
-  },
-  "scripts": {
-    "test": "make test"
-  },
-  "main": "index",
-  "engines": {
-    "node": ">= 0.6.x"
-  },
-  "files": [
-    "index.js"
+  "keywords": [
+    "react-native"
   ],
-  "dependencies": {
-    "commander": "^2.9.0"
-  },
+  "author": "chenxianming",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/chenxianming/react-native-build/issues"
   },
