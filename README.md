@@ -8,7 +8,7 @@ In first,you need do some work for build..
 1.Makesure your can runnig the grogram on your device or emulator
 
 2.cd app root path
-#$ react-native start
+running react-native start
 
 
 Install:
