@@ -3,7 +3,8 @@ react-native-build (android only)
 
 build *.apk file on linux.
 
-In first,you need do some work for build..
+#Get started
+At first,you need do some work for build..
 
 1.Makesure your can runnig the grogram on your device or emulator
 
@@ -16,12 +17,9 @@ running
 
 Install:
 
-    npm install react-native-build
-    
-or
-    
-    npm install react-native-build -g
-    
+ npm install react-native-build
+ or
+ npm install react-native-build   
     
 Usage:
 
@@ -35,7 +33,7 @@ or
     ./bin/react-native-build -a react-native android path
     
     
-Example:
+#Example:
 
     var builder = require('react-native-build');
     builder('/Users/name/generatorapp/android',function(result){
