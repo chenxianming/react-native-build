@@ -8,34 +8,40 @@ In first,you need do some work for build..
 1.Makesure your can runnig the grogram on your device or emulator
 
 2.cd app root path
-running react-native start
+
+running 
+
+    react-native start
 
 
 Install:
+
     npm install react-native-build
     
-    or
+or
     
     npm install react-native-build -g
     
     
 Usage:
+
     var builder = require('react-native-build');
     builder('react-native android path',function(result){
         console.log(result);//output path
     });
     
-    or
+or
     
     ./bin/react-native-build -a react-native android path
     
     
 Example:
+
     var builder = require('react-native-build');
     builder('/Users/name/generatorapp/android',function(result){
         console.log(result);//output path
     });
     
-    or on command line
+or on command line
     
     ./bin/react-native-build -a /Users/name/generatorapp/android
