@@ -3,6 +3,9 @@
   "version": "1.0.1",
   "description": "react-native-build (android only)",
   "main": "index.js",
+  "bin": {
+    "react-native-build": "./bin/react-native-build"
+  },
   "dependencies": {
     "commander": "^2.9.0"
   },
