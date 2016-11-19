@@ -17,9 +17,13 @@ running
 
 Install:
 
- npm install react-native-build
- or
- npm install react-native-build   
+    npm install react-native-build
+    
+or use command line
+
+    npm install react-native-build -g
+
+
     
 Usage:
 
@@ -42,4 +46,4 @@ or
     
 or on command line
     
-    ./bin/react-native-build -a /Users/name/generatorapp/android
+    react-native-build -a /Users/name/generatorapp/android
