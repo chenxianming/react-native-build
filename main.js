@@ -9,6 +9,7 @@ module.exports = function(path,callback){
     }
     
     var exec = require('child_process').exec;
+    var fs = require('fs');
     
     ;(function(){
         return new Promise(function(resolve,reject){
@@ -20,6 +21,15 @@ module.exports = function(path,callback){
             });
         });
     }()).then(function(){
+        return new Promise(function(resolve,reject){
+            var fsExist = fs.existsSync(path+"/app/src/main/assets/");
+            if(!fsExist){
+                fs.mkdirSync(path+"/app/src/main/assets/");
+            }
+            
+            resolve();
+        });
+    }).then(function(){
         return new Promise(function(resolve,reject){
             try{
                 exec("curl -k 'http://localhost:8081/index.android.bundle' > "+path+"/app/src/main/assets/index.android.bundle",function(err,stdout,stderr){
