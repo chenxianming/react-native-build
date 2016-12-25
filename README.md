@@ -34,7 +34,7 @@ Usage:
     
 or
     
-    ./bin/react-native-build -a react-native android path
+    ./bin/react-native-build -e react entryfile.js -a react android path
     
     
 #Example:
@@ -46,4 +46,4 @@ or
     
 or on command line
     
-    react-native-build -a /Users/name/generatorapp/android
+    react-native-build -e /Users/name/generatorapp/main.js -a /Users/name/generatorapp/android
