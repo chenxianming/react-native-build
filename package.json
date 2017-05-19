@@ -1,6 +1,6 @@
 {
   "name": "react-native-build",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "react-native-build (android only)",
   "main": "index.js",
   "bin": {

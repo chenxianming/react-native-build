@@ -3,6 +3,8 @@ react-native-build (android only)
 
 build *.apk file on linux.
 
+This is a generator module for Doemit(doemit.com)
+
 #Get started
 At first,you need do some work for build..
 
